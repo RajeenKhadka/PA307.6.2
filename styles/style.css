@@ -1,0 +1,122 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    color: #333;
+    background-color: snow;
+    margin: 0;
+    background-color: black;
+  }
+
+  .items {
+    padding: 8px;
+    background-color: white;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.25);
+  }
+
+
+.body-container{
+    display: grid;
+    height: 100vh;
+    grid-template-rows: 0 1fr 1fr;
+}
+
+.sidebar{
+    grid-template-rows: 0;
+}
+
+.sidebar-items{
+    padding-top: 25px;
+}
+
+.head{
+    background-color: #FAF7F0;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+
+}
+
+.middle{
+    background-color: #D8D2C2;
+}
+
+.top-info{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    gap: 20px;
+    
+}
+
+.box{
+    width: 270px;
+    height:100px;
+    background-color: rgb(77, 74, 74);
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    color: white;
+    text-align: center;
+    font-size: 29px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.data-box{
+    display: grid;
+    grid-template-rows: auto;
+    gap: 10px;
+    height: 100%
+}
+
+@media (min-width: 785px) {
+    .body-container{
+        grid-template-columns: repeat(12,1fr);
+        grid-template-rows: repeat(8, 1fr);
+    }
+
+    .body-container .sidebar{
+        grid-column: 1 / span 3;
+        grid-row: 1 / span 8;
+    }
+
+    .body-container .head{
+        grid-column: 4 / span 12;
+        grid-row: 1 / span 2;
+    }
+
+    .body-container .middle{
+        grid-column: 4 / span 12;
+        grid-row: 3/ span 8;
+    }
+
+    .data-box{
+        grid-template-columns: repeat(10, 1fr);
+        grid-template-rows: repeat(10, 1fr);
+    }
+
+    .data1{
+        grid-row: 2 / span 4;
+        grid-column: 2 / span 4;
+    }
+
+    .data2{
+        grid-row: 2 / span 4;
+        grid-column: 6 / span 4;
+    }
+
+    .data3{
+        grid-row: 6 / span 4;
+        grid-column: 2 / span 8;
+    }
+
+}
+
+
+
